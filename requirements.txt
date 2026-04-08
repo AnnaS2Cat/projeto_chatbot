@@ -1,0 +1,8 @@
+numpy
+pandas
+requests
+openai
+python-dotenv
+yfinance
+matplotlib
+colorama
