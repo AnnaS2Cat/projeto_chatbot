@@ -3,10 +3,10 @@ import random
 from faker import Faker
 from datetime import datetime, timedelta
 
-# Inicializar a biblioteca Faker
+#inicializar a biblioteca faker
 fake = Faker()
 
-# Função para gerar dados fictícios
+#função para gerar dados fictícios
 def generate_data():
     invoice_id = fake.uuid4()[:8]
     branch = random.choice(["A", "B", "C"])
@@ -53,7 +53,7 @@ def generate_data():
         rating,
     ]
 
-# Cabeçalho do arquivo CSV
+#cabeçalho do arquivo CSV
 header = [
     "Invoice ID",
     "Branch",
@@ -74,7 +74,7 @@ header = [
     "Rating",
 ]
 
-# Gerar e salvar os dados em um arquivo CSV
+#gerar e salvar os dados em um arquivo CSV
 with open("sales_data.csv", mode="w", newline="", encoding="utf-8") as file:
     writer = csv.writer(file)
     writer.writerow(header)

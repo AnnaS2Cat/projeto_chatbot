@@ -6,3 +6,4 @@ python-dotenv
 yfinance
 matplotlib
 colorama
+gtts

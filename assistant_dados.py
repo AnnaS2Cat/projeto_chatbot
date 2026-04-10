@@ -30,14 +30,12 @@ Ranking médio de vendas por categoria:
 {ranking_texto}
 """
 
-#a ia interpreta os dados, só lê os resultados e gera insights
+#ia interpreta os dados, só lê os resultados e gera insights
 resposta = client.chat.completions.create(
     model="llama-3.1-8b-instant",
     messages=[
         {"role": "system", "content": "Você é um analista de dados. Explique os resultados de forma clara, objetiva e com insights de negócio."},
-        {"role": "user",
-            # manda o resumo processado sem dados brutos
-            "content": f"Analise os seguintes dados de vendas e gere insights:\n\n{resumo_negocio}"}
+        {"role": "user", "content": f"Analise os seguintes dados de vendas e gere insights:\n\n{resumo_negocio}"}
     ]
 )
 print(resposta.choices[0].message.content)
